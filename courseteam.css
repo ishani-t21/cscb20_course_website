@@ -1,0 +1,278 @@
+/*avoid horizontal scrolling*/
+html, body {
+    max-width: 100%;
+	overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    padding-top: 70px;
+}
+
+/* Header Style */
+.top-header {
+    background-color: #01050f;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    z-index: 1000;
+}
+
+/* Course Title */
+.top-header h2 {
+    margin: 0;
+    font-size: 18px;
+    word-wrap: break-word;
+    margin-left: 15px;
+}
+
+/* Navigation Menu */
+.menu-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+    font-size: 25px;
+    cursor: pointer;
+    padding: 10px;
+    display: block;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #496786;
+    min-width: 170px;
+    padding: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove bullet points from the navigation list */
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Dropdown link style */
+.dropdown-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Dropdown link */
+.dropdown-menu a {
+    color: white;
+    padding: 12px;
+    display: block;
+    text-decoration: none;
+    word-wrap: break-word;
+}
+
+/* Hover effect for links */
+.dropdown-menu a:hover {
+    background-color: #84a8c8;
+}
+
+/* Show dropdown on hover */
+.menu-container:hover .dropdown-menu {
+    display: block;
+}
+
+/* CourseTeam Section with Blue Background */
+.team-container {
+    background-color: #122454; /* UofT Blue */
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* CourseTeam Heading */
+.team-container h1 {
+    font-size: 36px;
+	padding: 0;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* CourseTeam Description */
+.team-container p {
+    font-size: 16px;
+    max-width: 800px;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+.wrapper {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	grid-template-columns: 312px 312px;
+	grid-template-rows: 300px 300px;
+	gap: 100px;
+	margin-top: 90px;
+  
+}
+
+@media (max-width: 1024px) {
+	.wrapper {
+		grid-template-columns: 312px;    
+		grid-template-rows: 300px 300px 300px 300px;
+		margin-top: 100px;
+	}
+	
+	.top-header {
+		padding: 10px 15px;
+        height: auto;
+	}
+  
+	.top-header h1 {
+        font-size: 28px;
+		text-align: center;
+        margin-left: 0;
+    }
+  
+    body {
+        padding-top: 70px;
+    }
+
+    .menu-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-icon {
+        font-size: 30px;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+        position: static;
+        display: none;
+    }
+
+    .dropdown-menu ul {
+        text-align: center;
+    }
+
+    .dropdown-menu a {
+        padding: 15px;
+        display: block;
+    }
+
+    .team-container {
+        padding: 30px 10px;
+    }
+
+    .team-container h1 {
+        font-size: 28px;
+		margin-top: 70px;
+    }
+
+    .team-container p {
+        font-size: 16px;
+    }	
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.box {
+	width: 310px;
+	height: 266px;
+	background-color: #122454;
+	background-image: url('empty_profile.png');
+	background-size: 233px 233px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: flex;
+	box-sizing: border-box;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.box-details {
+    font-size: 16px;
+    color: black;
+	text-align: left;
+    font-weight: bold;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*Ensures footer is at the bottom*/
+.content-wrapper {
+    flex: 1;
+	
+}
+
+/* Styling footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #01050f;
+    color: white;
+	margin-top: 50px;
+    flex-wrap: wrap;
+	
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-left h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.footer-left a {
+    color: #84a8c8;
+    font-size: 18px;
+    margin-top: 5px;
+	text-decoration: none;
+}
+
+.footer-left a:hover {
+    text-decoration: underline;
+}
+
+.footer-right {
+    text-align: right;
+}

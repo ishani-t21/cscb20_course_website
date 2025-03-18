@@ -1,0 +1,304 @@
+/*avoid horizontal scrolling*/
+html, body {
+    max-width: 100%;
+	overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    padding-top: 70px;
+}
+
+/* Header Style */
+.top-header {
+    background-color: #01050f;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    z-index: 1000;
+}
+
+/* Course Title */
+.top-header h2 {
+    margin: 0;
+    font-size: 18px;
+    word-wrap: break-word;
+    margin-left: 15px;
+}
+
+/* Navigation Menu */
+.menu-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+    font-size: 25px;
+    cursor: pointer;
+    padding: 10px;
+    display: block;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #496786;
+    min-width: 170px;
+    padding: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove bullet points from the navigation list */
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Dropdown link style */
+.dropdown-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Dropdown link */
+.dropdown-menu a {
+    color: white;
+    padding: 12px;
+    display: block;
+    text-decoration: none;
+    word-wrap: break-word;
+}
+
+/* Hover effect for links */
+.dropdown-menu a:hover {
+    background-color: #84a8c8;
+}
+
+/* Show dropdown on hover */
+.menu-container:hover .dropdown-menu {
+    display: block;
+}
+
+/* Feedbacks Section with Blue Background */
+.feedback-container {
+    background-color: #122454; /* UofT Blue */
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* Feedback Heading */
+.feedback-container h1 {
+    font-size: 36px;
+	padding: 0;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Feedback Description */
+.feedback-container p {
+    font-size: 16px;
+    max-width: 1000px;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+    .top-header {
+		padding: 10px 15px;
+        height: auto;
+    }
+	
+    .top-header h1 {
+        font-size: 28px;
+		text-align: center;
+        margin-left: 0;
+    }
+	
+    body {
+        padding-top: 70px;
+    }
+
+    .menu-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-icon {
+        font-size: 30px;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+        position: static;
+        display: none;
+    }
+
+    .dropdown-menu ul {
+        text-align: center;
+    }
+
+    .dropdown-menu a {
+        padding: 15px;
+        display: block;
+    }
+
+    .feedback-container {
+        padding: 30px 10px;
+    }
+
+    .feedback-container h1 {
+        font-size: 28px;
+		margin-top: 70px;
+    }
+
+    .feedback-container p {
+        font-size: 16px;
+    }
+	
+	textarea {
+		min-height: 150px;
+    }
+}
+
+.container {
+    max-width: 800px;
+    align-items: center;
+    margin: 0 auto;  /* centers the whole container*/
+    padding: 20px;
+    background-color: #496786;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.form-container {
+	margin: 0 auto;
+    padding: 20px;
+    background-color: #b7dce6;
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+form {
+    max-width: 480px;
+    padding: 20px;
+	align-items:center;
+}
+  
+/*formatting each input box*/
+input[type="text"] {
+	align-items: center;
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	border: none;
+	box-sizing: border-box;
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+input[type="email"] {
+	width: 100%;
+	padding: 12px 20px;
+	border: none;
+	margin: 8px 0;
+	box-sizing: border-box;
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+  
+textarea {
+    background-color: #ffffff;
+    font-size: 16px;
+    height: auto;
+    margin: 8px 0;
+    padding: 12px 20px;
+	box-sizing: border-box;
+    height: 48px;
+    width: 100%;
+    margin-bottom: 16px;
+	resize: none;
+    min-height: 180px;
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+  
+button {
+    padding: 10px 20px;
+    background-color: #496786;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #020a1d;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*ensures footer is always at the bottom*/
+.wrapper {
+    flex: 1;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #01050f;
+    color: white;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-left h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.footer-left a {
+    color: #84a8c8;
+    font-size: 18px;
+    margin-top: 5px;
+	text-decoration: none;
+}
+
+.footer-left a:hover {
+    text-decoration: underline;
+}
+
+.footer-right {
+    text-align: right;
+}

@@ -1,0 +1,363 @@
+/*avoid horizontal scrolling*/
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body, nav {
+    margin:0;
+    padding: 0;
+}
+
+.Itop-header {  /*styling the header*/
+    background-color: #01060c;
+    color: rgba(255, 255, 255, 0.932);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+    font-size: 13px;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 1000;
+}
+
+/*editing the second header which is ONLY visible on smaller screens*/
+.top-header {
+    background-color: #01050f;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    z-index: 1000;
+}
+
+/* Course Title */
+.top-header h2 {
+    margin: 0;
+    font-size: 18px;
+    word-wrap: break-word;
+    margin-left: 15px;
+}
+
+/* Navigation Menu */
+.menu-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+    font-size: 25px;
+    cursor: pointer;
+    padding: 10px;
+    display: block;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #496786;
+    min-width: 170px;
+    padding: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove bullet points from the navigation list */
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Dropdown link style */
+.dropdown-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Dropdown link */
+.dropdown-menu a {
+    color: white;
+    padding: 12px;
+    display: block;
+    text-decoration: none;
+    word-wrap: break-word;
+}
+
+/* Hover effect for links */
+.dropdown-menu a:hover {
+    background-color: #84a8c8;
+}
+
+/* Show dropdown on hover */
+.menu-container:hover .dropdown-menu {
+    display: block;
+}
+
+.top-header{
+    display: none; /*we dont want to display it UNLESS its a small screen*/
+}
+
+/*using media queries to put the condition that the smaller version of the header should only be visible is small screen*/
+@media (max-width:1275px){
+    .Itop-header {
+        display:none;
+    }
+    .top-header {display: flex;
+                flex-direction: row;
+                align-items: left;
+    }
+}
+
+.Itop-header h1{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: sans-serif;
+}
+
+/*styling navigation elements*/
+nav {
+    display: flex;  /*to make it into row*/
+    gap: 28px;  /*spacing each 'box'*/
+}
+
+nav a {       /*styling each element*/
+    color:aliceblue;
+    align-items: left;
+    justify-content: space-between;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 6px 15px;
+    align-items: center;
+    margin-top: 5px;
+    font-family: sans-serif;
+    transition: background-color 0.2s;  /*to smoothly hover and highlight*/
+}
+
+/*hover effect for all elements which are linked in nav bar*/
+nav a:hover {
+    background-color: #5b5e61;
+}
+
+/*the box with introduction to course, description and image*/
+.blue_box {
+    display: flex;
+    width: 100%;
+    min-height: 573px;
+    background-color: #122454; /* Dark blue */
+    color: white;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+}
+
+/*adapting this blue box to diff screen sizes*/
+@media (max-width:1024px) {
+    .blue_box {
+        flex-direction: column; /*upon shirnking dimesnions we want it to stack*/
+        text-align:center;
+        align-items: center;
+        min-height: auto; /*so that it adjusts with changing height*/
+    }
+}
+
+.text-container {
+    width: 85% ; /*we dont want it to be very wide*/
+}
+
+.h1_box {  /*heading of course text box*/
+    width: 100%;
+    height: auto; /*to adjust depending on diff screens*/
+}
+
+.p_box { /*the box with course description*/
+    margin-top: 40px;
+    max-width : 100%;
+    width: 755px;
+    height: 250px;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    font-family: sans-serif;
+    word-wrap: break-word;
+}
+
+h1 {
+    margin-top:50px;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: sans-serif;
+    background-color: transparent; /* Invisible background */
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.welcome-box {
+    background-color: #1f6bb8;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+/* Zoom-out effect on hover */
+.welcome-box:hover {
+    transform: scale(0.95); /* Reduces the size to 95% of the original size */
+}
+
+.welcome-box p {
+    color: white;
+    font-size: 30px;
+}
+
+/*set the margin greater if the screen dimensions shrink
+this is because upon strinking the menu icon and the
+heading stack vertically which increases header's height*/
+@media(max-width: 1000px) {
+    h1{
+        margin-top:90px;
+    }
+}
+
+body { /*general home page background*/
+    background-color: rgb(236, 236, 236);
+}
+
+h2{
+    margin: 50px;
+    font-size: 35px;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+}
+
+/*editing announcement box 1*/
+.announcement_box {
+    font-family: sans-serif;
+    margin-left: 30px;
+    margin: 30px;
+    font-size: 18px;
+    line-height: 1.7;
+    border: 1px solid black; /*to make it look like a proper box, border*/
+    padding: 30px;
+    border-radius: 5x;
+    background-color: #84a8c8;
+    box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.3), /*we need shadow on left right top bottom*/
+                5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/*editing announcement box 2*/
+.announcement_box2 {
+    padding: 10px 10px 10px 10px;
+    margin: 30px;
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.7;
+    border: 1px solid black; /*to make it look like a proper box, border*/
+    padding: 10px;
+    border-radius: 5x;
+    background-color: #84a8c8;
+    box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.3), /*we need shadow on left right top bottom*/
+                5px 5px 10px rgba(0, 0, 0, 0.3);
+    list-style-type: circle;
+    font-family: sans-serif;
+}
+
+.announcement_box2 p {
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 20px;
+    font-family: sans-serif;
+}
+
+/*the heading above the calendar*/
+h3 {
+    font-family: sans-serif;
+    font-size: 25px;
+    color: #122454;
+    text-align: center;
+}
+
+iframe {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0px;
+    margin-bottom: 40px;
+}
+
+/*adjusting it to smaller screens*/
+@media (max-width:1024px) {
+    .calendar {
+        width: 80%; /*should shrink with small screens*/
+        height: 600px;
+    }
+}
+
+/*footer for this page*/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*ensures footer is at the bottom*/
+.wrapper {
+    flex: 1;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between; /* Space between left and right sections */
+    align-items: center;
+    padding: 20px;
+    background-color: #01050f;
+    color: white;
+   
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-left h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.footer-left a {
+    color: #84a8c8;
+    font-size: 18px;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+.footer-left a:hover {
+    text-decoration: underline;
+}
+
+.footer-right {
+    text-align: right;
+}

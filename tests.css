@@ -1,0 +1,314 @@
+/*avoid horizontal scrolling*/
+html, body {
+    max-width: 100%;
+	overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    padding-top: 70px;
+}
+
+/* Header Style */
+.top-header {
+    background-color: #01050f;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    z-index: 1000;
+}
+
+/* Course Title */
+.top-header h2 {
+    margin: 0;
+    font-size: 18px;
+    word-wrap: break-word;
+    margin-left: 15px;
+}
+
+/* Navigation Menu */
+.menu-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+    font-size: 25px;
+    cursor: pointer;
+    padding: 10px;
+    display: block;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #496786;
+    min-width: 170px;
+    padding: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove bullet points from the navigation list */
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Dropdown link style */
+.dropdown-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Dropdown link */
+.dropdown-menu a {
+    color: white;
+    padding: 12px;
+    display: block;
+    text-decoration: none;
+    word-wrap: break-word;
+}
+
+/* Hover effect for links */
+.dropdown-menu a:hover {
+    background-color: #84a8c8;
+}
+
+/* Show dropdown on hover */
+.menu-container:hover .dropdown-menu {
+    display: block;
+}
+
+/* Tests Section with Blue Background */
+.tests-container {
+    background-color: #122454; /* UofT Blue */
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* Tests Heading */
+.tests-container h1 {
+    font-size: 36px;
+    padding: 0;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Tests Description */
+.tests-container p {
+    font-size: 16px;
+    max-width: 800px;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+/* Default (laptop and larger screens) */
+.tests-grid {
+    display: grid;
+    grid-template-columns: 800px;
+    grid-gap: 30px;
+    padding: 20px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Test Box */
+.test-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: left;
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Hover Effect */
+.test-box:hover {
+    transform: scale(1.05); /* Zoom effect */
+}
+
+.lecture-box h3 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.date-posted {
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Link Boxes (Slides, Worksheet) */
+.link-box {
+    background-color: #496786;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 8px;
+    width: 40%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.link-box:hover {
+    background-color: #84a8c8;
+}
+
+@media (max-width: 1024px) {
+    .top-header {
+		padding: 10px 15px;
+        height: auto;
+    }
+	
+    .top-header h1 {
+        font-size: 28px;
+		text-align: center;
+        margin-left: 0;
+    }
+    
+    body {
+        padding-top: 70px;
+    }
+
+    .menu-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-icon {
+        font-size: 30px;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+        position: static;
+        display: none;
+    }
+
+    .dropdown-menu ul {
+        text-align: center;
+    }
+
+    .dropdown-menu a {
+        padding: 15px;
+        display: block;
+    }
+
+    .tests-container {
+        padding: 30px 10px;
+    }
+
+    .tests-container h1 {
+        font-size: 28px;
+        margin-top: 70px;
+    }
+
+    .tests-container p {
+        font-size: 16px;
+    }
+
+    .tests-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lecture-box h3 {
+        font-size: 20px;
+    }
+
+    .date-posted {
+        font-size: 13px;
+        text-align: left;
+    }
+
+    .link-box {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*ensures footer is at the bottom*/
+.wrapper {
+    flex: 1;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between; /* Space between left and right sections */
+    align-items: center;
+    padding: 20px;
+    background-color: #01050f;
+    color: white;
+    
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-left h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.footer-left a {
+    color: #84a8c8;
+    font-size: 18px;
+    margin-top: 5px;
+	text-decoration: none;
+}
+
+.footer-left a:hover {
+    text-decoration: underline;
+}
+
+.footer-right {
+    text-align: right;
+}
