@@ -1,9 +1,9 @@
-CSCB20 Course Website Redesign
+# **CSCB20 Course Website - Redesign**
 
 This project is a redesigned course website for CSCB20, built using only HTML and CSS. The goal is to create a modern, responsive, and user-friendly website while following strict development constraints.
 
-Features:
-
+### **Features:**
+___
 - Responsive Design: Works on desktop, tablet, and mobile using CSS media queries.
 - CSS Grid & Flexbox Layout: Ensures a clean and structured page design.
 - Interactive Elements: Hover effects, dropdown menus, and smooth CSS animations.
